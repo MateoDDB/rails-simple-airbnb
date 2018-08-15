@@ -1,21 +1,35 @@
-<h1>Form</h1>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+    <img src="https://static.thenounproject.com/png/207662-200.png" alt="logo">
+  </a>
 
-  <div class="card" style="width: 18rem;">
-    <% @flats.each do |flat| %>
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><%= flat.name%></h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= flat.address%></li>
-        <li class="list-group-item"><%= flat.description%></li>
-        <li class="list-group-item"><%= flat.price_per_night%></li>
-        <li class="list-group-item"><%= flat.number_of_guests%></li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    <% end %>
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <input type="" name="">
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Search</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Add Flat</a>
   </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <% @flats.each do |flat| %>
+      <div class="col-xs-4 col-sm-6 col-md-6">
+        <div class="thumbnail">
+          <img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="room">
+          <div class="caption">
+            <h3><%= flat.name%></h3>
+            <p><%= flat.address%></p>
+            <p><%= flat.description%></p>
+            <p>
+              <%= flat.price_per_night%>
+              <%= flat.number_of_guests%>
+            </p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>

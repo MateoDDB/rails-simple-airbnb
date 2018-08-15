@@ -1,0 +1,21 @@
+<h1>Form</h1>
+
+  <div class="card" style="width: 18rem;">
+    <% @flats.each do |flat| %>
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name%></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= flat.address%></li>
+        <li class="list-group-item"><%= flat.description%></li>
+        <li class="list-group-item"><%= flat.price_per_night%></li>
+        <li class="list-group-item"><%= flat.number_of_guests%></li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    <% end %>
+  </div>
